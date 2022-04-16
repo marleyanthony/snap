@@ -6,14 +6,17 @@ import menuIconClosed from "../../images/icon-close-menu.svg";
 const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 16px 24px 16px;
 `;
 
 const NavbarLogo = styled.div`
-  /* border: 1px solid red; */
+  font-size: 35px;
+  font-weight: 700;
 `;
 
 const NavbarMenuIcon = styled.div`
+  display: flex;
+  align-items: center;
   cursor: pointer;
 `;
 
