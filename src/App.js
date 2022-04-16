@@ -1,6 +1,7 @@
 import Navbar from "./components/navigation/Navbar";
 import Hero from "./components/hero/Hero";
 import HeroSubsection from "./components/hero/HeroSubsection";
+import Sponsors from "./components/hero/Sponsors";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <HeroSubsection />
+      <Sponsors />
     </div>
   );
 }
