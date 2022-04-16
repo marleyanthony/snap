@@ -1,7 +1,5 @@
-import { useState } from "react";
 import styled from "styled-components";
 import menuIcon from "../../images/icon-menu.svg";
-import menuIconClosed from "../../images/icon-close-menu.svg";
 
 const NavbarWrapper = styled.div`
   display: flex;
@@ -20,22 +18,12 @@ const NavbarMenuIcon = styled.div`
   cursor: pointer;
 `;
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+const Navbar = ({ setIsMenuOpen }) => {
   return (
     <NavbarWrapper>
       <NavbarLogo>snap</NavbarLogo>
-      <NavbarMenuIcon onClick={toggleMenu}>
-        {!menuOpen ? (
-          <img src={menuIcon} alt="menu icon" />
-        ) : (
-          <img src={menuIconClosed} alt="menu icon closed" />
-        )}
+      <NavbarMenuIcon onClick={setIsMenuOpen}>
+        <img src={menuIcon} alt="menu icon" />
       </NavbarMenuIcon>
     </NavbarWrapper>
   );
