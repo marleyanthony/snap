@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import MenuData from "./MenuData";
 import menuClosedIcon from "../../images/icon-close-menu.svg";
 import arrowDown from "../../images/icon-arrow-down.svg";
 import arrowUp from "../../images/icon-arrow-up.svg";
@@ -14,7 +13,7 @@ const MenuDrawer = styled.div`
   top: 0;
   right: 0;
   background-color: #fff;
-  height: 100%;
+  height: 100vh;
   width: 50%;
   display: flex;
   flex-direction: column;
