@@ -29,16 +29,18 @@ const CTAButton = styled.button`
   cursor: pointer;
 `;
 
-const HeroSubsection = () => {
+const HeroSubsection = ({ isDesktop }) => {
   return (
-    <SubsectionWrapper>
-      <Heading>Make Remote Work</Heading>
-      <Content>
-        Get your team in sync, no matter your location. Streamline processes,
-        create team rituals, and watch productivity soar.
-      </Content>
-      <CTAButton>Learn More</CTAButton>
-    </SubsectionWrapper>
+    isDesktop && (
+      <SubsectionWrapper>
+        <Heading>Make Remote Work</Heading>
+        <Content>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </Content>
+        <CTAButton>Learn More</CTAButton>
+      </SubsectionWrapper>
+    )
   );
 };
 

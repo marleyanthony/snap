@@ -47,8 +47,8 @@ function App() {
       <Overlay isMenuOpen={menuOpen} />
       <Menu isMenuOpen={menuOpen} setIsMenuOpen={toggleMenu} />
       <Navbar setIsMenuOpen={toggleMenu} isDesktop={isDesktop} />
-      <Hero />
-      <HeroSubsection />
+      <Hero isDesktop={isDesktop} />
+      <HeroSubsection is={isDesktop} />
       <Sponsors />
     </AppWrapper>
   );

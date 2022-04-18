@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import menuIcon from "../../images/icon-menu.svg";
+import arrowUp from "../../images/icon-arrow-up.svg";
+import arrowDown from "../../images/icon-arrow-down.svg";
 
 const NavbarWrapper = styled.div`
   display: flex;
@@ -10,6 +12,23 @@ const NavbarWrapper = styled.div`
 const NavbarLogo = styled.div`
   font-size: 35px;
   font-weight: 700;
+`;
+
+const NavbarDesktopWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const NavbarItemsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+`;
+
+const NavbarItem = styled.div`
+  padding: 12px 10px 10px;
+  font-size: 14px;
+  font-weight: 400;
 `;
 
 const NavbarMenuIcon = styled.div`
@@ -46,7 +65,15 @@ const RegisterButton = styled(LoginButton)`
 const Navbar = ({ setIsMenuOpen, isDesktop }) => {
   return (
     <NavbarWrapper>
-      <NavbarLogo>snap</NavbarLogo>
+      <NavbarDesktopWrapper>
+        <NavbarLogo>snap</NavbarLogo>
+        <NavbarItemsWrapper>
+          <NavbarItem>Features</NavbarItem>
+          <NavbarItem>Company</NavbarItem>
+          <NavbarItem>Careers</NavbarItem>
+          <NavbarItem>About</NavbarItem>
+        </NavbarItemsWrapper>
+      </NavbarDesktopWrapper>
       {isDesktop ? (
         <DesktopButtonContainer>
           <LoginButton>Login</LoginButton>
